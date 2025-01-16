@@ -1,0 +1,224 @@
+/* Diseño general del celular */
+.cellphone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 900px; 
+  width: 450px; 
+  border: 6px solid black;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin: 50px auto;
+}
+
+/* Pantalla del celular */
+.screen {
+  height: 92%;
+  width: 95%;
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Barra superior */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+}
+
+.left-section {
+  flex: 1; 
+}
+
+.center-section {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+}
+
+.right-section {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.45); 
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Barra de búsqueda */
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.input {
+  font-family: "Montserrat", sans-serif;
+  width: 100%; 
+  height: 35px; 
+  padding-left: 2.5rem; 
+  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  border: 0;
+  border-radius: 12px;
+  background-color: #16171d;
+  outline: none;
+  color: #bdbecb;
+  font-size: 16px; 
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+}
+
+.input::placeholder {
+  color: #bdbecb;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+}
+
+.input:active {
+  transform: scale(0.95);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2.5px #2f303d;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  fill: #bdbecb;
+  width: 1.2rem; 
+  height: 1.2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Lista de contactos */
+.contact-list {
+  flex: 1;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: hidden; 
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px; 
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.contact-details {
+  font-size: 15px;
+  color: #bbb;
+}
+
+.contact-action {
+  font-size: 18px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto; 
+}
+
+.contact-action:hover {
+  color: #0f9d58; 
+}
+
+/* Teclado numérico */
+.dial-pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px; 
+  font-size: 24px; 
+  color: white;
+  background-color: #444;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.key span {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 5px;
+}
+
+.key:hover {
+  background-color: #555;
+}
+
+/* Botón de llamada */
+.call-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px; 
+  font-size: 24px; 
+  color: white;
+  background-color: #0f9d58;
+  border-radius: 10px; 
+  cursor: pointer;
+}
+
+.call-button span {
+  font-size: 12px;
+  color: white;
+  margin-top: 5px;
+}
+
+.call-button:hover {
+  background-color: #0c8645;
+}
